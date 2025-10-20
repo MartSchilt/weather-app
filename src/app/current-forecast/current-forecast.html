@@ -1,0 +1,7 @@
+<div class="current-forecast-content">
+    <h1 class="current-forecast-header"><mat-icon [svgIcon]="getWeatherIcon(weatherCode())"></mat-icon>{{ getWeatherName(weatherCode()) }}</h1>
+    <p class="current-forecast-temperature">{{ currentTemperature() }}°</p>
+    <h1>Feels like {{ currentTemperatureApparent() }}°</h1>
+    <h1>High {{ maxTemperature() }}° · Low {{ minTemperature() }}°</h1>
+    <h2>{{ precipitation() }}% chance of rain today</h2>
+</div>

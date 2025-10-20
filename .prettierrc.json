@@ -1,0 +1,27 @@
+{
+    "tabWidth": 4,
+    "useTabs": false,
+    "singleQuote": true,
+    "semi": true,
+    "bracketSpacing": true,
+    "arrowParens": "avoid",
+    "bracketSameLine": true,
+    "printWidth": 180,
+    "endOfLine": "auto",
+    "trailingComma": "none",
+    "overrides": [
+        {
+            "files": ["*.model.ts", "*.module.ts"],
+            "options": {
+                "printWidth": 80
+            }
+        },
+        {
+            "files": "*.html",
+            "options": {
+                "parser": "angular"
+            }
+        }
+    ],
+    "plugins": ["prettier-plugin-organize-imports"]
+}

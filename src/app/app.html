@@ -1,0 +1,16 @@
+<div class="weather-container">
+    @if (!loading()) {
+        <app-location [location]="location()" (refreshClick)="getForecast()" (locationChange)="locationChange($event)" class="margin-auto"></app-location>
+        <h2 class="margin-auto">{{ currentDate() }}</h2>
+
+        @if (forecast()) {
+            <app-current-forecast [currentDayForecast]="forecast()!.timelines.daily[0]" [currentHourForecast]="forecast()!.timelines.hourly[0]"></app-current-forecast>
+            <app-hourly-forecast [hourlyForecasts]="forecast()!.timelines.hourly"></app-hourly-forecast>
+            <app-six-day-forecast [dailyForecasts]="forecast()!.timelines.daily"></app-six-day-forecast>
+        } @else {
+            <app-error-card [error]="error()"></app-error-card>
+        }
+    } @else {
+        <mat-spinner class="margin-auto"></mat-spinner>
+    }
+</div>

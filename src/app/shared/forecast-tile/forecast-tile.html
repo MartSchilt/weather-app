@@ -1,0 +1,10 @@
+<div class="forecast-tile">
+    <div>{{ temperature() }}°</div>
+    <div><mat-icon [svgIcon]="getWeatherIcon(weatherCode())" class="weather-icon"></mat-icon></div>
+    <div class="precipitation-text">
+        @if (precipitation()) {
+            {{ precipitation() }}%
+        }
+    </div>
+    <div>{{ dateTime() }}</div>
+</div>

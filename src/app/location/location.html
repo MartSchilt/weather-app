@@ -1,0 +1,16 @@
+<div class="location-container margin-auto">
+    <h1>{{ location() }}</h1>
+    <button class="margin-auto" matIconButton [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button (click)="editLocationClick()" mat-menu-item>
+            <mat-icon>edit</mat-icon>
+            <span>Change location</span>
+        </button>
+        <button (click)="refreshClick.emit()" mat-menu-item>
+            <mat-icon>refresh</mat-icon>
+            <span>Refresh forecast</span>
+        </button>
+    </mat-menu>
+</div>
